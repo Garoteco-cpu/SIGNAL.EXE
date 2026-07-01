@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "title": "OBEAH_ME",
+    "artist": "RICHIE_CAMPBELL",
+    "genre": "REGGAE",
+    "cover": "/covers/richie.jpg",
+    "audioUrl": "https://www.dropbox.com/scl/fi/q9ecf6bc1irq2bfcfsau7/Richie.mp3?rlkey=acy32riy0sp5a26je5tp7eeep&st=nj3829hp&raw=1"
+  },
+  {
+    "id": "2",
+    "title": "HABIBI",
+    "artist": "DILLAZ",
+    "genre": "HIP_HOP",
+    "cover": "/covers/dillaz.jpg",
+    "audioUrl": "https://www.dropbox.com/scl/fi/s11jf9eo69l15pg6hn33a/Dillaz.mp3?rlkey=dfvq4x6r5jouc81i9wra34yn7&st=6nwfy7k3&raw=1"
+  },
+  {
+    "id": "3",
+    "title": "THE_SUMMONING",
+    "artist": "SLEEP_TOKEN",
+    "genre": "ROCK_METAL",
+    "cover": "/covers/sleeptoken.jpg",
+    "audioUrl": "https://www.dropbox.com/scl/fi/1e3ge0rqtzze5esimyc50/Sleep.mp3?rlkey=uk3a6ioyout25p8hhr98psxgc&st=woqnr02p&raw=1"
+  },
+  {
+    "id": "4",
+    "title": "N95",
+    "artist": "KENDRICK_LAMAR",
+    "genre": "HIP_HOP",
+    "cover": "/covers/kendricklamar.jpg",
+    "audioUrl": "https://www.dropbox.com/scl/fi/knhg1fel03skp8ewpesi9/Kendrick.mp3?rlkey=mm6bkmpjas6ww55827w2qa3nx&st=wva4tf42&raw=1"
+  },
+  {
+    "id": "5",
+    "title": "ACORDAR",
+    "artist": "PLUTONIO",
+    "genre": "HIP_HOP",
+    "cover": "/covers/plutonio.jpg",
+    "audioUrl": "https://www.dropbox.com/scl/fi/5x9pnhmeki4q0cbkgasny/Plutonio.mp3?rlkey=azfus1t7vlofyabf7mm02wqwp&st=chkys5ed&raw=1"
+  },
+  {
+    "id": "6",
+    "title": "¡ +1 !",
+    "artist": "PAPILLON",
+    "genre": "HIP_HOP",
+    "cover": "/covers/papillon.jpg",
+    "audioUrl": "https://www.dropbox.com/scl/fi/bpc3pefh8moz2hb8a4t5n/Papillon.mp3?rlkey=5wa9maor7n47kxdpxo2ttut5v&st=3ijzjjzn&raw=1"
+  },
+  {
+    "id": "7",
+    "title": "THE_DIARY_OF_JANE",
+    "artist": "BREAKING_BENJAMIN",
+    "genre": "ROCK_METAL",
+    "cover": "/covers/breakingbenjamin.jpg",
+    "audioUrl": "https://www.dropbox.com/scl/fi/lqv6lmzjwtlpzn6mdhkyt/Breaking.mp3?rlkey=obifi1a1av96qcp1gm6hz8kdy&st=hiy768gn&raw=1"
+  },
+  {
+    "id": "8",
+    "title": "1_Casa_2_Portões",
+    "artist": "FILIPE_KARLSSON",
+    "genre": "INDIE_POP",
+    "cover": "/covers/filipekarlsson.jpg",
+    "audioUrl": "https://www.dropbox.com/scl/fi/6dnbmzc5u4axun0h3vx9z/Filipe.mp3?rlkey=w1ewv18icnp2abgor7vxz5zbj&st=m9c82fpo&raw=1"
+  },
+  {
+    "id": "9",
+    "title": "SPECTER",
+    "artist": "BAD_OMENS",
+    "genre": "ROCK_METAL",
+    "cover": "/covers/badomens.jpg",
+    "audioUrl": "https://www.dropbox.com/scl/fi/f05f59b63vij1m70afjpx/Bad.mp3?rlkey=pv6z8tl84cn82lq6d6lsprigr&st=walnwqcx&raw=1"
+  }
+]

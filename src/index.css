@@ -1,0 +1,265 @@
+/* ==========================================================================
+   1. RESET GLOBAL & CORES BASE
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'monospace', sans-serif;
+  background: #ffffff; /* Mantém o teu fundo escuro estilo dark-mode, fica brutal! */
+  color: #000000;
+}
+
+button { 
+  color: #000000 !important; 
+  font-family: 'monospace', sans-serif;
+}
+
+/* ==========================================================================
+   2. TIPOGRAFIA FLUIDA EM SINTONIA
+   ========================================================================== */
+/* ==========================================================================
+   2. TIPOGRAFIA FLUIDA (Apenas para o Título Principal do Site)
+   ========================================================================== */
+h1, h2, .section-title, main h2, main h1 {
+  color: #000000 !important; /* Branco para contrastar com o teu fundo escuro */
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  font-size: clamp(18px, 3.6vw, 29.2px) !important;
+  margin-bottom: 28px;
+  text-align: center !important; /* Centra APENAS o título principal */
+}
+
+/* ==========================================================================
+   4. COMPONENTES: DETALHES DOS CARDS (Músicas e Artistas)
+   ========================================================================== */
+.card-info h3 { 
+  color: #000000 !important; /* Texto preto porque o fundo do card é branco */
+  font-size: 14px !important; 
+  font-weight: 900 !important; 
+  text-transform: uppercase; 
+  text-align: left !important; /* Garante alinhamento à esquerda no card */
+  
+  /* Sistema anti-corte: quebra as linhas de forma limpa */
+  white-space: normal !important; 
+  overflow: visible !important; 
+  text-overflow: unset !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+  
+  line-height: 1.3;
+  margin-bottom: 4px !important;
+}
+
+.card-info p { 
+  color: #555555 !important; /* Cinza para o artista */
+  font-size: 11px !important; 
+  font-weight: bold; 
+  text-transform: uppercase;
+  text-align: left !important;
+  white-space: normal !important;
+  overflow-wrap: break-word !important;
+  margin-top: 4px;
+}
+
+/* ==========================================================================
+   3. ESTRUTURA DE LAYOUT (Desktop Fix)
+   ========================================================================== */
+.app-container { 
+  display: flex; 
+  flex-direction: column; 
+  min-height: 100vh; 
+}
+
+.main-layout { 
+  display: flex; 
+  flex-direction: row; /* Sidebar à esquerda, conteúdo à direita */
+  flex: 1; 
+  width: 100%;
+}
+
+.mobile-top-bar { 
+  display: none !important; /* Esconde COMPLETAMENTE a barra mobile no PC */
+}
+
+.content-panel { 
+  flex: 1; 
+  padding: 40px; 
+  min-width: 0; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente tudo o que estiver cá dentro */
+}
+
+/* ==========================================================================
+   4. FILTROS CENTRADOS & GRELHA DE MÚSICAS
+   ========================================================================== */
+.filter-container { 
+  display: flex !important; 
+  flex-wrap: wrap !important; 
+  gap: 14px !important; 
+  margin: 0 auto 36px auto !important;
+  justify-content: center !important;  /* Centra os botões na horizontal */
+  align-items: center !important;      
+  width: 100% !important;
+  max-width: 800px;                    
+}
+
+.filter-btn { 
+  background: #FFFFFF; 
+  color: #000000 !important;
+  border: 4px solid #000000; 
+  padding: 10px 20px; 
+  font-weight: 900; 
+  font-size: 13px;
+  cursor: pointer; 
+  box-shadow: 4px 4px 0px #000000; 
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.filter-btn.active { 
+  background: #00FF66 !important; 
+}
+
+/* ==========================================================================
+   4. GRELHA BRUTALISTA SEGUIDA (3 QUADRADOS POR LINHA REGULARES)
+   ========================================================================== */
+.tracks-grid { 
+  display: grid !important; 
+  
+  /* 🚨 A MAGIA ESTÁ AQUI: Força EXATAMENTE 3 colunas iguais no computador.
+     Como tens 9 músicas, o site vai criar 3 linhas perfeitas de 3. */
+  grid-template-columns: repeat(3, 1fr) !important; 
+  
+  gap: 32px !important; 
+  width: 100% !important;
+  max-width: 1200px !important; /* Limita a largura máxima para os quadrados não distorcerem */
+  margin: 0 auto !important;
+}
+
+.track-card { 
+  background: #FFFFFF !important; 
+  border: 4px solid #000000 !important; 
+  padding: 24px !important; 
+  box-shadow: 8px 8px 0px #000000 !important; 
+  width: 100% !important; 
+  display: flex !important;
+  flex-direction: column !important;
+  transition: transform 0.1s ease !important;
+}
+
+.track-card:active {
+  transform: translate(3px, 3px) !important;
+  box-shadow: 5px 5px 0px #000000 !important;
+}
+
+/* ==========================================================================
+   5. TRANSIÇÃO RESPONSIVA PARA TELEMÓVEL
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* No telemóvel, as 3 colunas passam a ser apenas 1, para os quadrados continuarem grandes */
+  .tracks-grid { 
+    grid-template-columns: 1fr !important; 
+    gap: 20px !important;
+  }
+  
+  .track-card {
+    padding: 16px !important;
+    box-shadow: 5px 5px 0px #000000 !important;
+  }
+}
+/* ==========================================================================
+   5. TRANSIÇÃO RESPONSIVA MOBILE
+   ========================================================================== */
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .mobile-top-bar { 
+    display: flex !important; 
+    align-items: center; 
+    justify-content: space-between; 
+    background: #FFFFFF; 
+    border-bottom: 4px solid #000000; 
+    padding: 0 16px; 
+    height: 60px; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 200; 
+  }
+
+  .mobile-logo { 
+    color: #000000 !important;
+    font-weight: 900; 
+    font-size: 14px; 
+  }
+
+  .menu-toggle-btn { 
+    display: flex; 
+    align-items: center; 
+    gap: 6px; 
+    background: #00FF66; 
+    border: 3px solid #000000; 
+    padding: 6px 12px; 
+    font-weight: 900; 
+    font-size: 11px; 
+  }
+
+  .sidebar-wrapper { 
+    position: fixed; 
+    top: 60px; 
+    left: 0; 
+    width: 280px; 
+    height: calc(100vh - 60px); 
+    z-index: 150; 
+    transform: translateX(-100%); 
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+    border-right: 4px solid #000000; 
+    box-shadow: 10px 0px 0px rgba(0,0,0,0.1); 
+    background: #FFFFFF;
+  }
+
+  .sidebar-wrapper.open { 
+    transform: translateX(0); 
+  }
+
+  .sidebar-wrapper > aside { 
+    width: 280px !important; 
+    border-right: none !important; 
+  }
+
+  .content-panel { 
+    padding: 84px 16px 24px 16px; 
+  }
+
+  .filter-container { 
+  display: flex !important; 
+  flex-wrap: wrap !important; 
+  gap: 14px !important; 
+  justify-content: center !important; /* Força cada linha de botões a centrar-se */
+  align-items: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto 36px auto !important; /* Centra o bloco inteiro na página */
+}
+  .filter-btn { 
+    padding: 8px 14px;
+    font-size: 11px !important;
+    box-shadow: 3px 3px 0px #000000;
+  }
+
+  
+
+
+}
